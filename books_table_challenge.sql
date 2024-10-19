@@ -1,11 +1,11 @@
-CREATE TABLE Books (
+--CREATE TABLE Books (
     AuthorID INT,
     Title VARCHAR(50),
     Revision INT,
     CONSTRAINT PK_Books PRIMARY KEY (AuthorID, Title, Revision)
 );
 
-INSERT INTO Books (AuthorID, Title, Revision) 
+--INSERT INTO Books (AuthorID, Title, Revision) 
 VALUES 
 (1, 'AAAAAAAAAAAAA', 1),
 (2, 'BBBBBBBBBBBBBB', 1),
@@ -14,7 +14,7 @@ VALUES
 (5, 'EEEEEEEEEEEEEEE', 1);
 
 
-DECLARE @i INT = 1;
+--DECLARE @i INT = 1;
 
 WHILE @i <= 100
 BEGIN
@@ -25,16 +25,16 @@ BEGIN
     SET @i = @i + 1;
 END;
 
-INSERT INTO Books (AuthorID, Title, Revision)
+--INSERT INTO Books (AuthorID, Title, Revision)
 SELECT AuthorID, Title, 2
 FROM Books;
 
 
-DELETE FROM Books
+--DELETE FROM Books
 WHERE Revision = 2 AND AuthorID % 2 = 1;
 
 
-SELECT * from books
+--SELECT * from books
 
 
 
